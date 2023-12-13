@@ -23,11 +23,16 @@
         <form id="searchForm">
             <label for="query">Search Query:</label>
             <input type="text" id="query" name="query">
-            <button type="button" onclick="searchPhotos()">Search</button>
+            <button type="button" onclick="showImage()">Search</button>
           </form>
+
+        <div id="imageContainer" style="display: none;">
+            <img id="myImage" alt="Displayed Image">
+        </div>
           
           <div id="results"></div>
         <hr>
+
         <h3>Upload Images</h3>
         <form id="uploadForm" enctype="multipart/form-data">
             <label for="photo">Select Photo:</label>

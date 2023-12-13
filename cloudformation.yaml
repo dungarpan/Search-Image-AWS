@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'AWS CloudFormation Template for Photo Search Infrastructure'
+
+Resources:
+  # Lambda Functions
+  PhotoUploadFunction:
+    Type: 'AWS::Lambda::Function'
+    DeletionPolicy: 'Retain'
+    Properties:
+      FunctionName: 'index-photos-LF1'
+
+  SearchPhotosFunction:
+    Type: 'AWS::Lambda::Function'
+    DeletionPolicy: 'Retain'
+    Properties:
+      FunctionName: 'search-photos-LF2'
+
+
+
