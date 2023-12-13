@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Image Recognition</title>
+
+        <script src="./assets/js/sdk/lib/axios/dist/axios.standalone.js"></script>
+        <script src="./assets/js/sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+        <script src="./assets/js/sdk/lib/CryptoJS/rollups/sha256.js"></script>
+        <script src="./assets/js/sdk/lib/CryptoJS/components/hmac.js"></script>
+        <script src="./assets/js/sdk/lib/CryptoJS/components/enc-base64.js"></script>
+        <script src="./assets/js/sdk/lib/url-template/url-template.js"></script>
+        <script src="./assets/js/sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+        <script src="./assets/js/sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+        <script src="./assets/js/sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+        <script src="./assets/js/sdk/lib/apiGatewayCore/utils.js"></script>
+        <script src="./assets/js/sdk/apigClient.js"></script>
+
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h2>This is an image recogniztion website</h2>
+        <br>
+        <h3>Search Images</h3>
+        <form id="searchForm">
+            <label for="query">Search Query:</label>
+            <input type="text" id="query" name="query">
+            <button type="button" onclick="searchPhotos()">Search</button>
+          </form>
+          
+          <div id="results"></div>
+        <hr>
+        <h3>Upload Images</h3>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="photo">Select Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+            
+            <label for="customLabels">Custom Labels:</label>
+            <input type="text" id="customLabels" name="customLabels" placeholder="Enter custom labels separated by commas">
+            
+            <button type="button" onclick="uploadPhoto()">Upload Photo</button>
+          </form>
+          
+          <div id="uploadResult"></div>
+    </body>
+
+</html>
